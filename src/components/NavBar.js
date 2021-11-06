@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar shadow-xl">
+    <nav className="navbar flex shadow-xl">
       <Link to="/" className="nav-logo">
         T
       </Link>
@@ -24,7 +24,7 @@ const Navbar = () => {
       <ul className={open ? "nav-links active" : "nav-links"}>
         <li className="nav-item">
           <Link to="/" className="nav-link" onClick={closeMenu}>
-            Hjem
+            PEP Sjekk
           </Link>
         </li>
         <li className="nav-item">

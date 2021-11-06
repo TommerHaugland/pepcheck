@@ -1,19 +1,16 @@
 import React from "react";
+import PersonTable from "./PersonTable";
 
 export default function PersonResult(props) {
   const displayPersons = (props) => {
     const { hits } = props;
 
     if (hits.length > 0) {
-      return hits.map((hit, index) => {
-        console.log(hit);
-
-        return (
-          <div className="item" key={hit.id}>
-            <p>{hit.name}</p>
-          </div>
-        );
-      });
+      return (
+        <div>
+          <PersonTable tableData={hits} />
+        </div>
+      );
     } else {
       return <h2>Ingen info enda</h2>;
     }
