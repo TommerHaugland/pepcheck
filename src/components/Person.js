@@ -49,11 +49,12 @@ export default function Person() {
       <div>
         <form>
           <div className="input-field">
-            <label>
-              Navn:
+            <label className="flex gap-x-2 items-baseline">
+              Søk på navn:
               <input
                 type="text"
                 name="name"
+                className="rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 onKeyPress={(e) => {
                   if (e.key === "Enter") {
                     e.preventDefault();
@@ -64,7 +65,7 @@ export default function Person() {
                 onChange={(e) => setName(e.target.value)}
               />
             </label>
-            <input type="button" value="Submit" onClick={() => getAllHits()} />
+            <input type="button" value="Søk" onClick={() => getAllHits()} />
           </div>
         </form>
         {/* Hvis treff og ikke loader, render hits */}
